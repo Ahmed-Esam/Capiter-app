@@ -1,0 +1,17 @@
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">name</label>
+      <input type="text"  [(ngModel)]="User.name" [ngModelOptions]="{standalone: true}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">job</label>
+      <input type="text"  [(ngModel)]="User.job" [ngModelOptions]="{standalone: true}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <button (click)="SendData()" class="btn btn-primary" [ngClass]="{'HiddenBtn': validBtn === true, 'showBtn' : validBtn === false }">Add User</button>
+    <button (click)="UpdateVal()" class="btn btn-primary m-2" [ngClass]="{'HiddenBtn': validBtn === false, 'showBtn' : validBtn === true }"
+    >Update User</button>
+  </form>
+</div>
